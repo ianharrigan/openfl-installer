@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox width="100%" autoSize="true">
+	<style>
+		.settings-dialog #buttonBar {
+			horizontalAlignment: right;
+			paddingRight: 20;
+			paddingBottom: 10;
+		}
+	</style>
+	<vbox id="settingsContainer">
+	</vbox>
+</vbox>

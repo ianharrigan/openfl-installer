@@ -1,0 +1,41 @@
+[
+	{ "id":"id0", "label": "Some long type of operation (2.5 secs)", "type": "demo.delay",
+		"config": {
+			"delay": 2.5
+		}
+	},
+	{ "id":"id1", "label": "Downloading Haxe", "type": "demo.progress",
+		"config": {
+			"delay": 0.1,
+			"max": 100,
+			"step": 1
+		}
+	},
+	{ "id":"id2", "label": "Installing Haxe", "type": "demo.delay",
+		"config": {
+			"delay": 1.5
+		}
+	},
+	{ "id":"id3", "label": "Downloading OpenFL", "type": "demo.progress",
+		"config": {
+			"delay": 0.1,
+			"max": 100,
+			"step": 1
+		}
+	},
+	{ "id":"id4", "label": "Installing OpenFL", "type": "demo.delay",
+		"config": {
+			"delay": 1.5
+		}
+	},
+	{ "id":"id5", "label": "Finalizing install", "type": "demo.delay",
+		"config": {
+			"delay": 0.5
+		}
+	},
+	{ "id":"id6", "label": "Nothing else (3 secs)", "type": "demo.delay",
+		"config": {
+			"delay": 3
+		}
+	}
+]

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<grid columns="2" id="checklist" width="300" alpha="0">
+	<style>
+		Text.complete {
+			color: #0B96AB;
+		}
+		
+		Text.in-progress {
+			color: #24AFC4;
+		}
+		
+		Text.to-do {
+			color: #AAAAAA;
+		}
+		
+		Text.error-message {
+			color: #880000;
+		}
+		
+		#checklist Animation, #checklist Image {
+			autoSize: false;
+			width: 24;
+			height: 24;
+		}
+	</style>
+</grid>

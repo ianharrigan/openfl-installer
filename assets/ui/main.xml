@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<absolute id="container" width="100%" height="100%">
+	<style>
+		Button.settings {
+			icon: "img/cog.png";
+			padding: 0;
+			paddingTop: 15;
+			backgroundColor: -1;
+			borderSize: 0;
+		}
+		
+		Button.settings:over {
+			alpha: .7;
+		}
+	</style>
+	<button id="settingsButton" styleName="settings" alpha="0" />
+	
+	<button id="beginButton" styleName="large" text="Download and Install" alpha="0" />
+	<image id="logo" resource="img/logo.png" alpha="0" />
+	
+	<button id="exitButton" styleName="large" text="Exit" alpha="0" />
+</absolute>

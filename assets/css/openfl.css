@@ -1,0 +1,100 @@
+#modalOverlay {
+	backgroundColor: #FFFFFF;
+}
+
+Button {
+	backgroundColor: #24AFC4;
+	borderColor: #24AFC4;
+	colour: #FFFFFF;
+	filter: null;
+	paddingTop: 6;
+	paddingBottom: 6;
+	paddingLeft: 12;
+	paddingRight: 12;
+	cornerRadius: 4;
+	fontSize: 14;
+	fontBold: false;
+}
+
+Button:over {
+	backgroundColor: #0B96AB;
+	borderColor: #0B96AB;
+}
+
+Button:down {
+	backgroundColor: #24AFC4;
+	borderColor: #24AFC4;
+}
+
+Button.large {
+	paddingTop: 10;
+	paddingBottom: 10;
+	paddingLeft: 12;
+	paddingRight: 12;
+	fontSize: 20;
+	fontBold: false;
+}
+
+CheckBox Text {
+	color: #24AFC4;
+}
+
+CheckBoxValue #unselected {
+	filter: null;
+	borderColor: #24AFC4;
+}
+
+CheckBoxValue #selected {
+	filter: null;
+	borderColor: #24AFC4;
+	icon: "css/cross.png";
+}
+
+HProgress {
+	height: 4;
+	backgroundColor: #FFFFFF:
+	borderSize: 0;
+	padding: 0;
+	filter: null;
+}
+
+HProgress #background {
+	backgroundColor: #FFFFFF:
+	borderSize: 0;
+	padding: 0;
+	borderColor: #FFFFFF;
+}
+
+HProgress #value {
+	backgroundColor: #24AFC4;
+	borderSize: 0;
+	cornerRadius: 1;
+}
+
+Popup {
+	backgroundColor: #FFFFFF;
+	borderColor: #CCCCCC;
+	filter: dropShadow(2, 45, 0xCCCCCC, 8, 20, 20, 1, 3);
+	padding: 1;
+}
+
+Popup #titleBar {
+	backgroundColor: #FFFFFF;
+	paddingTop: 15;
+	paddingRight: 15;
+	autoSize:true;
+}
+
+Popup #titleBar Text {
+	color: #CCCCCC;
+	horizontalAlignment: "right";
+	fontSize: 30;
+}
+
+Popup #popupContent {
+	paddingLeft: 15;
+	paddingBottom: 15;
+}
+
+Animation {
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<!-- NMML reference: https://gist.github.com/1763850 -->
+	
+	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
+	<meta title="OpenFL Installer" package="openfl.installer.openflinstaller" version="1.0.0" company="" />
+	
+	<!-- output -->
+	<app main="openfl.installer.Main" file="openfl" path="bin" />
+	
+	<window background="#FFFFFF" fps="60" />
+	<window width="800" height="480" unless="mobile" />
+	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
+	
+	<haxedef name="embed-resources" />
+	
+	<!-- classpath, haxe libs -->
+	<source path="src" />
+	<haxelib name="haxeui" />
+	<haxelib name="haxe-gif" />
+	
+	<!-- assets -->
+	<icon path="assets/openfl.svg" embed="true" />
+	<assets path="assets" rename="assets" embed="true" />
+	<assets path="assets/data" rename="data" embed="true" />
+	<assets path="assets/img" rename="img" embed="true" />
+	<assets path="assets/ui" rename="ui" embed="true" />
+	<assets path="assets/css" rename="css" embed="true" />
+	<assets path="assets/gif" rename="gif" embed="true" type="binary"/>
+	
+	<haxeflag name="-D next" />
+	
+	<!-- optimize output -->
+	<haxeflag name="-dce std" />
+	<!--
+	-->
+	
+</project>

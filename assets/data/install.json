@@ -1,0 +1,44 @@
+{
+	"settings": [
+		{ "id": "INSTALL_HAXE", "label": "Install Haxe", "type": "boolean", "value": "true" },
+		{ "id": "INSTALL_OPENFL", "label": "Install OpenFL", "type": "boolean", "value": "true" },
+		{ "id": "INSTALL_HAXEUI", "label": "Install HaxeUI", "type": "boolean", "value": "true" }
+	],
+	"steps": [
+		{ "id":"download_haxe_win", "label": "Downloading Haxe 3.1.3 for Windows", "type": "files.download",
+			"config": {
+				"remoteFile": "http://haxe.org/website-content/downloads/3,1,3/downloads/haxe-3.1.3-win.exe",
+				"localFile": "%TEMP_DIR%/haxe-3.1.3-win.exe"
+			},
+			"condition": "INSTALL_HAXE=true & PLATFORM='windows'"
+		},
+		{ "id":"install_haxe_win", "label": "Installing Haxe 3.1.3 for Windows", "type": "system.exec",
+			"config": {
+				"command": "%TEMP_DIR%/haxe-3.1.3-win.exe"
+			},
+			"condition": "INSTALL_HAXE=true & PLATFORM='windows'"
+		},
+		
+		{ "id":"install_lime", "label": "Installing latest Lime", "type": "haxelib.install",
+			"config": {
+				"lib": "lime"
+			},
+			"condition": "INSTALL_OPENFL=true"
+		},
+		
+		{ "id":"install_openfl", "label": "Installing latest OpenFL", "type": "haxelib.install",
+			"config": {
+				"lib": "openfl"
+			},
+			"condition": "INSTALL_OPENFL=true"
+		},
+		
+		{ "id":"install_haxeui", "label": "Installing latest HaxeUI", "type": "haxelib.install",
+			"config": {
+				"lib": "haxeui"
+			},
+			"condition": "INSTALL_HAXEUI=true"
+		}
+		
+	]
+}
