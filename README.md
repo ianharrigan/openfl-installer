@@ -1,6 +1,6 @@
 OpenFL Installer
 ================================
-Customizable automatic installer for haxe/openfl/etc
+Customizable automatic installer for haxe/openfl/etc (built using <a href="https://github.com/ianharrigan/haxeui">HaxeUI</a>)
 
 Currently install is driven from <a href="https://github.com/ianharrigan/openfl-installer/blob/master/assets/data/install.json">this file</a>.
 
