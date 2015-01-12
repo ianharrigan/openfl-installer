@@ -5,18 +5,24 @@
 		{ "id": "INSTALL_HAXEUI", "label": "Install HaxeUI", "type": "boolean", "value": "true" }
 	],
 	"steps": [
-		{ "id":"download_haxe_win", "label": "Downloading Haxe 3.1.3 for Windows", "type": "files.download",
+		{ "id":"download_haxe", "label": "Downloading Haxe 3.1.3 for %OS_NAME%", "type": "files.download",
 			"config": {
-				"remoteFile": "http://haxe.org/website-content/downloads/3,1,3/downloads/haxe-3.1.3-win.exe",
-				"localFile": "%TEMP_DIR%/haxe-3.1.3-win.exe"
+				"remotePath": "http://haxe.org/website-content/downloads/3,1,3/downloads/",
+				"remoteFile": {
+					"win": "haxe-3.1.3-win.exe",
+					"mac": "haxe-3.1.3-osx-installer.pkg",
+					"linux32": "haxe-3.1.3-linux32.tar.gz",
+					"linux64": "haxe-3.1.3-linux64.tar.gz"
+				},
+				"localFile": "%TEMP_DIR%/${remoteFile}"
 			},
-			"condition": "INSTALL_HAXE=true & PLATFORM='windows'"
+			"condition": "INSTALL_HAXE=true"
 		},
-		{ "id":"install_haxe_win", "label": "Installing Haxe 3.1.3 for Windows", "type": "system.exec",
+		{ "id":"install_haxe", "label": "Installing Haxe 3.1.3 for %OS_NAME%", "type": "system.exec",
 			"config": {
-				"command": "%TEMP_DIR%/haxe-3.1.3-win.exe"
+				"command": "${download_haxe.localFile}"
 			},
-			"condition": "INSTALL_HAXE=true & PLATFORM='windows'"
+			"condition": "INSTALL_HAXE=true"
 		},
 		
 		{ "id":"install_lime", "label": "Installing latest Lime", "type": "haxelib.install",
